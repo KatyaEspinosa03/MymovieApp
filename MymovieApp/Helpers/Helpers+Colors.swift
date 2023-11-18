@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+enum Colors: String {
+    case primaryColor
+    case Placeholder
+}
