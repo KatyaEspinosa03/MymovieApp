@@ -83,6 +83,9 @@ class SignUpViewController: UIViewController {
         view.endEditing(true)
     }
     
+    /// Function to connect to the webserver and do the sign up
+    ///
+    /// This function takes the following parameters: first name, last name, email, password and confirim password
     private func processSignup(firstName: String, lastname: String, email: String, password: String, confirmPassword: String ){
         
         let headers = [
@@ -125,6 +128,12 @@ class SignUpViewController: UIViewController {
         
     }
     
+    /// Function to customize the alert messages used when trying to dispatch the webserver connection
+    ///
+    /// - Parameters:
+    ///    - title: title to show to the user
+    ///    - message: the action the user needs to take
+   
     private func alertMessage(title: String, message:String ){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default)
