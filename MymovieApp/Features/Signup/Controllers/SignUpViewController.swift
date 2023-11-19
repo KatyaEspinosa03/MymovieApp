@@ -29,6 +29,31 @@ class SignUpViewController: UIViewController {
 
 
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
+        
+        if let email = emailTextField.text,
+           let drowssap = drowssapTextField.text,
+           let firstName = firstNameTextField.text,
+           let lastName = lastNameTextField.text,
+           let confirmdrowssap = drowssapConfirmTextField.text,
+           !email.isEmpty &&
+            !drowssap.isEmpty &&
+            !firstName.isEmpty &&
+            !lastName.isEmpty &&
+            !confirmdrowssap.isEmpty &&
+            drowssap == confirmdrowssap {
+            
+            processSignup(firstName: firstName, lastname: lastName, email: email, password: drowssap, confirmPassword: confirmdrowssap)
+            alertMessage(title: "Sign up exitoso", message: "Tu información ha sido registrada")
+            
+        }else if let drowssap = drowssapTextField.text,
+                 let confirmdrowssap = drowssapConfirmTextField.text,
+        drowssap != confirmdrowssap {
+            alertMessage(title: "Las contraseñas no coinciden", message: "Confirma que las contraseñas sean iguales")
+           
+        } else {
+            
+            alertMessage(title: "Falta información", message: "Rellena todos los campos")
+        }
     }
     
 // MARK: Private function
@@ -58,7 +83,55 @@ class SignUpViewController: UIViewController {
         view.endEditing(true)
     }
     
+    private func processSignup(firstName: String, lastname: String, email: String, password: String, confirmPassword: String ){
+        
+        let headers = [
+            "content-type": "application/json",
+            "Authentication": "Bearer 5hvsyf2K6xuUfJVxRu5mDaNI0IAODh",
+            "X-RapidAPI-Key": "4628b3ca27msh9c7282376d9f318p1ed571jsn71c004e33816",
+            "X-RapidAPI-Host": "logintesting.p.rapidapi.com"
+        ]
+        
+        let url = URL(string: "https://logintesting.p.rapidapi.com/login")!
+        
+        let parameters = ["firstName": firstName,
+                          "lastName": lastname,
+                          "username": email,
+                          "password": password,
+                          "confirmPassword": confirmPassword]
+        
+        let postData = try! JSONSerialization.data(withJSONObject: parameters)
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = headers
+        request.httpBody = postData
+        
+        let urlSession = URLSession.shared
+        let dataTask = urlSession.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let response = response as? HTTPURLResponse,
+                      response.statusCode == 202, let data = data {
+                do{
+                    let json = try JSONSerialization.jsonObject(with: data) as? [String: Any]
+                    print("Sign up exitoso", json!)
+                }catch{
+                    print(error.localizedDescription)
+                }
+            }
+            
+        }
+        dataTask.resume()
+        
+    }
     
+    private func alertMessage(title: String, message:String ){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+        
+    }
 }
 
 extension SignUpViewController: UITextFieldDelegate{
