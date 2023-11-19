@@ -56,6 +56,12 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func signInButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
 // MARK: Private function
     
     /// Function to set the initial customization of the screen's text fields

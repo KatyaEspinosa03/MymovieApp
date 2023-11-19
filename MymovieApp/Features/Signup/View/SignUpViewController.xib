@@ -99,6 +99,9 @@
                             <state key="normal" title="Sign in">
                                 <color key="titleColor" name="primaryColor"/>
                             </state>
+                            <connections>
+                                <action selector="signInButtonPressed:" destination="-1" eventType="touchUpInside" id="iuy-4k-urF"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
