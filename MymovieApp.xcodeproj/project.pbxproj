@@ -20,6 +20,7 @@
 		751B6C0C2B01B0D2008BDC5F /* Helpers+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B6C0B2B01B0D2008BDC5F /* Helpers+TextFields.swift */; };
 		751B6C132B01B319008BDC5F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B6C112B01B319008BDC5F /* SignUpViewController.swift */; };
 		751B6C142B01B319008BDC5F /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751B6C122B01B319008BDC5F /* SignUpViewController.xib */; };
+		75F782C62B1D5621002EA0F5 /* ClientDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F782C52B1D5621002EA0F5 /* ClientDefaults.swift */; };
 		75F8EE7C2B0AE69C00E3BCF1 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8EE7B2B0AE69C00E3BCF1 /* APIClient.swift */; };
 		75F8EE7E2B0AEF1B00E3BCF1 /* Helpers+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8EE7D2B0AEF1B00E3BCF1 /* Helpers+Dictionary.swift */; };
 		75F8EE812B0AF36B00E3BCF1 /* LogInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8EE802B0AF36B00E3BCF1 /* LogInService.swift */; };
@@ -41,6 +42,7 @@
 		751B6C0B2B01B0D2008BDC5F /* Helpers+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helpers+TextFields.swift"; sourceTree = "<group>"; };
 		751B6C112B01B319008BDC5F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		751B6C122B01B319008BDC5F /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		75F782C52B1D5621002EA0F5 /* ClientDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDefaults.swift; sourceTree = "<group>"; };
 		75F8EE7B2B0AE69C00E3BCF1 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		75F8EE7D2B0AEF1B00E3BCF1 /* Helpers+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helpers+Dictionary.swift"; sourceTree = "<group>"; };
 		75F8EE802B0AF36B00E3BCF1 /* LogInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInService.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		751B6BE52B01A4CD008BDC5F /* MymovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				75F782C42B1D5600002EA0F5 /* Persitences */,
 				75F8EE792B0AE67B00E3BCF1 /* APIClient */,
 				751B6C082B01B09B008BDC5F /* Helpers */,
 				751B6BFB2B01A5FD008BDC5F /* Base */,
@@ -185,6 +188,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		75F782C42B1D5600002EA0F5 /* Persitences */ = {
+			isa = PBXGroup;
+			children = (
+				75F782C52B1D5621002EA0F5 /* ClientDefaults.swift */,
+			);
+			path = Persitences;
+			sourceTree = "<group>";
+		};
 		75F8EE792B0AE67B00E3BCF1 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +295,7 @@
 				751B6BE92B01A4CD008BDC5F /* SceneDelegate.swift in Sources */,
 				75F8EE812B0AF36B00E3BCF1 /* LogInService.swift in Sources */,
 				751B6C0A2B01B0B2008BDC5F /* Helpers+Colors.swift in Sources */,
+				75F782C62B1D5621002EA0F5 /* ClientDefaults.swift in Sources */,
 				75F8EE7E2B0AEF1B00E3BCF1 /* Helpers+Dictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

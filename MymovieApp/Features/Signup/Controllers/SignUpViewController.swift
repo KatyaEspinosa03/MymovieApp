@@ -46,9 +46,6 @@ class SignUpViewController: MainViewController {
         super.viewDidLoad()
         
         setCustomizeTextFields()
-        
-        
-        
         // Do any additional setup after loading the view.
     }
     
@@ -80,10 +77,11 @@ class SignUpViewController: MainViewController {
                          confirmPassword: confirmdrowssap))
             { result in
                 switch result {
-                case .success(let response):
+                case .success(let isSuccess):
+                
                     // TODO: We store info in internal database and navigate to main screen
                     self.alertMessage(title: "Sign up Exitoso", message: "")
-                    print(response.isSuccess)
+                    print(isSuccess)
                 case .failure(let error):
                     self.alertMessage(title: "Error", message: error.localizedDescription)
                 }

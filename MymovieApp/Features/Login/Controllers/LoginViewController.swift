@@ -40,6 +40,12 @@ class LoginViewController: MainViewController {
         
         setCustomizeTextFields()
         
+        let clientDefaults = ClientDefaults.shared
+        
+        if clientDefaults.getUsername != "" {
+            print("EL cliente inició sesión antes")
+            //TODO: Send to main screen
+        }
         
        
 
@@ -59,9 +65,9 @@ class LoginViewController: MainViewController {
             loginService.doLogIn(parameters: .init(username: email, password: drowssap)) 
             { result in
                 switch result {
-                case .success(let response):
+                case .success(let isSuccess):
                     self.alertMessage(title: "LogIn Exitoso", message: "")
-                    print(response.isSuccess)
+                    print(isSuccess)
                 case .failure(let error):
                     self.alertMessage(title: "Error", message: error.localizedDescription)
                 }

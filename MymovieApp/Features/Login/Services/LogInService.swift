@@ -38,8 +38,8 @@ class LogInService {
     
     /// Function to connect to the webserver and do the sign up
     ///
-    /// This function takes the following parameters: first name, last name, email, password and confirm password
-    public func doLogIn(parameters: UserDataLogIn, completion: @escaping (Result<LoginResponse, LogInErrors>) -> Void) {
+    /// This function takes the following parameters: first name, last name, email, password and confirm password, some of which are optionals
+    public func doLogIn(parameters: UserDataLogIn, completion: @escaping (Result<Bool, LogInErrors>) -> Void) {
         apiClient.executeService(httpBody: getParameters(parameters).getData()) { data, response, error in
             DispatchQueue.main.async {
                 if let error = error {
@@ -49,7 +49,15 @@ class LogInService {
                           let data = data {
                     do {
                         let loginResponse = try JSONDecoder().decode(LoginResponse.self, from: data)
-                        completion(.success(loginResponse))
+                        
+                        self.saveUserData(with: loginResponse.data)
+                        
+                        
+                        completion(.success(loginResponse.isSuccess))
+                        
+                        //We store information locally, in the device's memory and ecrypt it.
+                        
+                        
                     } catch {
                         completion(.failure(.errorResponse))
                     }
@@ -66,6 +74,12 @@ class LogInService {
          "username": parameters.username,
          "password": parameters.password,
          "confirmPassword": parameters.confirmPassword ?? ""]
+    }
+    
+    private func saveUserData(with data: LoginResponse.UserData) {
+        let clientDefault = ClientDefaults.shared
+        clientDefault.setUsername(with: data.username)
+        clientDefault.setAccessToken(with: data.accessToken)
     }
 }
 
