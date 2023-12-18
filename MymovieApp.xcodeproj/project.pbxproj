@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751325F02B2F5F6600F5D173 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751325EE2B2F5F6600F5D173 /* TableViewController.swift */; };
 		751B6BE72B01A4CD008BDC5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B6BE62B01A4CD008BDC5F /* AppDelegate.swift */; };
 		751B6BE92B01A4CD008BDC5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B6BE82B01A4CD008BDC5F /* SceneDelegate.swift */; };
 		751B6BEB2B01A4CD008BDC5F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B6BEA2B01A4CD008BDC5F /* MainViewController.swift */; };
@@ -20,6 +21,8 @@
 		751B6C0C2B01B0D2008BDC5F /* Helpers+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B6C0B2B01B0D2008BDC5F /* Helpers+TextFields.swift */; };
 		751B6C132B01B319008BDC5F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B6C112B01B319008BDC5F /* SignUpViewController.swift */; };
 		751B6C142B01B319008BDC5F /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751B6C122B01B319008BDC5F /* SignUpViewController.xib */; };
+		75901E842B2E4082006B0A7D /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75901E822B2E4082006B0A7D /* MovieTableViewCell.swift */; };
+		75901E852B2E4082006B0A7D /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75901E832B2E4082006B0A7D /* MovieTableViewCell.xib */; };
 		75F782C62B1D5621002EA0F5 /* ClientDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F782C52B1D5621002EA0F5 /* ClientDefaults.swift */; };
 		75F8EE7C2B0AE69C00E3BCF1 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8EE7B2B0AE69C00E3BCF1 /* APIClient.swift */; };
 		75F8EE7E2B0AEF1B00E3BCF1 /* Helpers+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8EE7D2B0AEF1B00E3BCF1 /* Helpers+Dictionary.swift */; };
@@ -27,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		751325EE2B2F5F6600F5D173 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		751B6BE32B01A4CD008BDC5F /* MymovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MymovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		751B6BE62B01A4CD008BDC5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		751B6BE82B01A4CD008BDC5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +46,8 @@
 		751B6C0B2B01B0D2008BDC5F /* Helpers+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helpers+TextFields.swift"; sourceTree = "<group>"; };
 		751B6C112B01B319008BDC5F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		751B6C122B01B319008BDC5F /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		75901E822B2E4082006B0A7D /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		75901E832B2E4082006B0A7D /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		75F782C52B1D5621002EA0F5 /* ClientDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDefaults.swift; sourceTree = "<group>"; };
 		75F8EE7B2B0AE69C00E3BCF1 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		75F8EE7D2B0AEF1B00E3BCF1 /* Helpers+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helpers+Dictionary.swift"; sourceTree = "<group>"; };
@@ -90,6 +96,7 @@
 		751B6BFA2B01A5E7008BDC5F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				75901E662B2E39E2006B0A7D /* tableView */,
 				751B6C0D2B01B2FA008BDC5F /* Signup */,
 				751B6BFC2B01A616008BDC5F /* Login */,
 			);
@@ -188,6 +195,40 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		75901E662B2E39E2006B0A7D /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				75901E672B2E39EC006B0A7D /* Model */,
+				75901E682B2E39F1006B0A7D /* View */,
+				75901E692B2E39F5006B0A7D /* Controllers */,
+			);
+			path = tableView;
+			sourceTree = "<group>";
+		};
+		75901E672B2E39EC006B0A7D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75901E822B2E4082006B0A7D /* MovieTableViewCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		75901E682B2E39F1006B0A7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				75901E832B2E4082006B0A7D /* MovieTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		75901E692B2E39F5006B0A7D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				751325EE2B2F5F6600F5D173 /* TableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		75F782C42B1D5600002EA0F5 /* Persitences */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				751B6C142B01B319008BDC5F /* SignUpViewController.xib in Resources */,
+				75901E852B2E4082006B0A7D /* MovieTableViewCell.xib in Resources */,
 				751B6C072B01A76A008BDC5F /* LoginViewController.xib in Resources */,
 				751B6BF32B01A4CF008BDC5F /* LaunchScreen.storyboard in Resources */,
 				751B6BF02B01A4CF008BDC5F /* Assets.xcassets in Resources */,
@@ -285,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75901E842B2E4082006B0A7D /* MovieTableViewCell.swift in Sources */,
 				751B6C032B01A6E6008BDC5F /* User.swift in Sources */,
 				751B6BEB2B01A4CD008BDC5F /* MainViewController.swift in Sources */,
 				75F8EE7C2B0AE69C00E3BCF1 /* APIClient.swift in Sources */,
@@ -296,6 +339,7 @@
 				75F8EE812B0AF36B00E3BCF1 /* LogInService.swift in Sources */,
 				751B6C0A2B01B0B2008BDC5F /* Helpers+Colors.swift in Sources */,
 				75F782C62B1D5621002EA0F5 /* ClientDefaults.swift in Sources */,
+				751325F02B2F5F6600F5D173 /* TableViewController.swift in Sources */,
 				75F8EE7E2B0AEF1B00E3BCF1 /* Helpers+Dictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
