@@ -49,8 +49,8 @@ class MovieTableViewCell: UITableViewCell {
     }
     
     func loadImage(with url: URL){
-        var urlRequest = URLRequest(url: url)
-        var session = URLSession.shared
+        let urlRequest = URLRequest(url: url)
+        let session = URLSession.shared
         let dataTask = session.dataTask(with: urlRequest) { data, _, error in
             if let error = error {
                 print(error.localizedDescription)
