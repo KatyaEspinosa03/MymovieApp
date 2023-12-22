@@ -40,7 +40,7 @@ class MovieTableViewCell: UITableViewCell {
         
         releaseYearLabel.text = String(movie.releaseYear.year)
         
-        if let imageURL = URL(string: movie.primaryImage.url){
+        if let imageURL = URL(string: movie.primaryImage?.url ?? "" ) {
             loadImage(with: imageURL)
         }
         
@@ -48,6 +48,11 @@ class MovieTableViewCell: UITableViewCell {
         
     }
     
+    
+    ///Function to retrieve the image from the API
+    ///
+    ///  - Parameters:
+    ///    -  url: of type URL
     func loadImage(with url: URL){
         let urlRequest = URLRequest(url: url)
         let session = URLSession.shared

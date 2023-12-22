@@ -45,18 +45,23 @@ class MovieTableViewController: UITableViewController {
         return 170
     }
 
+    
+    ///Function to retrieve the data from MovieData and display it on the UITable
     func fetchMovieData(){
+      
         let movieService = MovieService(apiClient: APIClient(
-            headers:  [
-            "X-RapidAPI-Key": "4628b3ca27msh9c7282376d9f318p1ed571jsn71c004e33816",
+            headers: [
+                "X-RapidAPI-Key": "4628b3ca27msh9c7282376d9f318p1ed571jsn71c004e33816",
             "X-RapidAPI-Host": "moviesdatabase.p.rapidapi.com"
-        ], 
+        ],
             url:  URL(string: "https://moviesdatabase.p.rapidapi.com/titles")!,
             httpMethod: .get))
         
         movieService.getMovieData { result in
             switch result {
             case .success(let movieResponse):
+                
+                print("movie data: \(movieResponse)")
                 
                 self.movies = movieResponse.results
                 DispatchQueue.main.async {
