@@ -17,10 +17,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene:  windowScene)
             
-            //let loginVC = LoginViewController()
-            let tableVC = TableViewController()
+            let movieTVC = MovieTableViewController()
+            let loginVC = LoginViewController()
             
-            window.rootViewController = tableVC
+            
+            window.rootViewController = movieTVC
             window.makeKeyAndVisible()
             self.window = window
         }

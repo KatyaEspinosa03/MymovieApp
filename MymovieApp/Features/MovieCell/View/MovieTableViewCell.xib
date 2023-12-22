@@ -20,7 +20,31 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUh-DD-8T7">
                         <rect key="frame" x="80" y="53.333333333333336" width="224" height="96.666666666666657"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COCO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FH6-Q9-Vp6">
+                                <rect key="frame" x="48" y="10" width="166" height="24"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgA-1J-PSF">
+                                <rect key="frame" x="48" y="37.999999999999993" width="26" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="FH6-Q9-Vp6" secondAttribute="bottom" constant="62.670000000000002" id="9GP-y6-kgS"/>
+                            <constraint firstAttribute="bottom" secondItem="CgA-1J-PSF" secondAttribute="bottom" constant="43.670000000000002" id="H3E-LS-ZUd"/>
+                            <constraint firstItem="FH6-Q9-Vp6" firstAttribute="top" secondItem="VUh-DD-8T7" secondAttribute="top" constant="10" id="QTQ-7e-gaw"/>
+                            <constraint firstAttribute="trailing" secondItem="FH6-Q9-Vp6" secondAttribute="trailing" constant="10" id="UiS-R1-m1q"/>
+                            <constraint firstItem="CgA-1J-PSF" firstAttribute="leading" secondItem="VUh-DD-8T7" secondAttribute="leading" constant="48" id="atx-d2-OdC"/>
+                            <constraint firstItem="CgA-1J-PSF" firstAttribute="top" secondItem="FH6-Q9-Vp6" secondAttribute="bottom" constant="4" id="hHD-d9-Fdc"/>
+                            <constraint firstItem="FH6-Q9-Vp6" firstAttribute="leading" secondItem="VUh-DD-8T7" secondAttribute="leading" constant="48" id="uEp-2N-ton"/>
+                            <constraint firstAttribute="trailing" secondItem="CgA-1J-PSF" secondAttribute="trailing" constant="150" id="yN4-jb-Ttr"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
                                 <integer key="value" value="20"/>
@@ -52,6 +76,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="movieImage" destination="LYH-Cc-XoB" id="pDm-iQ-9zJ"/>
+                <outlet property="movieTitle" destination="FH6-Q9-Vp6" id="Mbm-0c-Hvp"/>
+                <outlet property="releaseYearLabel" destination="CgA-1J-PSF" id="W9N-Re-JaT"/>
                 <outlet property="shadowView" destination="VUh-DD-8T7" id="gYa-I5-AMA"/>
             </connections>
             <point key="canvasLocation" x="138.93129770992365" y="60.91549295774648"/>

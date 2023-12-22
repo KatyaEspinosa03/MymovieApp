@@ -11,6 +11,13 @@ class MovieTableViewCell: UITableViewCell {
 
     @IBOutlet weak var shadowView: UIView!
     
+    @IBOutlet weak var movieImage: UIImageView!
+    
+    @IBOutlet weak var movieTitle: UILabel!
+    
+    @IBOutlet weak var releaseYearLabel: UILabel!
+    
+    private var movieModel = MovieModel()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,4 +35,33 @@ class MovieTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configureCell(with movie: MovieModel.Movie) {
+        movieTitle.text = movie.titleText.text
+        
+        releaseYearLabel.text = String(movie.releaseYear.year)
+        
+        if let imageURL = URL(string: movie.primaryImage.url){
+            loadImage(with: imageURL)
+        }
+        
+        
+        
+    }
+    
+    func loadImage(with url: URL){
+        var urlRequest = URLRequest(url: url)
+        var session = URLSession.shared
+        let dataTask = session.dataTask(with: urlRequest) { data, _, error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let data = data {
+               
+                    DispatchQueue.main.async {self.movieImage.image = UIImage(data: data)}
+            }
+                
+        }
+        dataTask.resume()
+        
+    }
+        
 }

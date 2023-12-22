@@ -52,6 +52,11 @@ class LoginViewController: MainViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("Salimos de login")
+    }
+    
     
     @IBAction func logInButton(_ sender: UIButton) {
             let email = emailTextField.text ?? ""
