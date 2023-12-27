@@ -18,7 +18,15 @@ class MovieTableViewController: UITableViewController {
         let movieTableViewCell = UINib(nibName: "MovieTableViewCell", bundle: nil)
         tableView.register(movieTableViewCell, forCellReuseIdentifier: "MovieTableViewCell")
         tableView.separatorStyle = .none
+        
+    
+        
+        let movieCustomHeaderView = UINib(nibName: "CustomHeaderView", bundle: nil)
+        tableView.register(movieCustomHeaderView, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
+        
+        
     }
+
 
     // MARK: - Table view data source
 
@@ -43,6 +51,16 @@ class MovieTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 170
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView =  tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as! CustomHeaderView
+        
+        return headerView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
 
     

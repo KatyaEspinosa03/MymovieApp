@@ -13,15 +13,15 @@ final class ClientDefaults {
     
     private init(){}
     
-   static var shared: ClientDefaults {
+    static var shared: ClientDefaults {
         return ClientDefaults()
     }
     
-   // MARK: Public Variables
+    // MARK: Public Variables
     
     public var getUsername: String {
         return decryptInfo(with: userDefaults.string(forKey: "username"))
-         }
+    }
     
     public var getAccessToken: String {
         return decryptInfo(with: userDefaults.string(forKey: "accessToken"))
@@ -33,13 +33,11 @@ final class ClientDefaults {
     
     // MARK: Public methods.
     
-    
     public func setUsername(with username: String){
         userDefaults.set(encryptInfo(with: username), forKey: "username")
     }
     
     public func setAccessToken(with accessToken: String){
-        
         userDefaults.set(encryptInfo(with: accessToken), forKey: "accessToken")
     }
     
@@ -50,11 +48,11 @@ final class ClientDefaults {
         let valueEncryted = data?.base64EncodedString()
         return valueEncryted
     }
+    
     private func decryptInfo(with value: String?) -> String {
         guard let valueEncrypted = value,
               let data = Data(base64Encoded: valueEncrypted),
-                let valueDecrypted = String(data: data, encoding: .utf8) else {return ""}
-        
+              let valueDecrypted = String(data: data, encoding: .utf8) else { return "" }
         return valueDecrypted
     }
 }

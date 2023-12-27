@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <viewLayoutGuide key="safeArea" id="vLr-E1-eTs"/>
-            <color key="backgroundColor" name="TableViewBackground"/>
+            <color key="backgroundColor" name="BackgroundColor"/>
             <connections>
                 <outlet property="dataSource" destination="-1" id="Tng-2m-Rnh"/>
                 <outlet property="delegate" destination="-1" id="9aC-8N-iBw"/>
@@ -27,8 +27,8 @@
         </tableView>
     </objects>
     <resources>
-        <namedColor name="TableViewBackground">
-            <color red="0.94900000095367432" green="0.80000001192092896" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.094117648900000003" green="0.098039209840000002" blue="0.15686275059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

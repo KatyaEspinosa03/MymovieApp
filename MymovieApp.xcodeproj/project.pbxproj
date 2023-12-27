@@ -22,6 +22,8 @@
 		751B6C0C2B01B0D2008BDC5F /* Helpers+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B6C0B2B01B0D2008BDC5F /* Helpers+TextFields.swift */; };
 		751B6C132B01B319008BDC5F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B6C112B01B319008BDC5F /* SignUpViewController.swift */; };
 		751B6C142B01B319008BDC5F /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751B6C122B01B319008BDC5F /* SignUpViewController.xib */; };
+		751BAD9A2B362448002FAC86 /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751BAD982B362448002FAC86 /* CustomHeaderView.swift */; };
+		751BAD9B2B362448002FAC86 /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751BAD992B362448002FAC86 /* CustomHeaderView.xib */; };
 		75F11E762B2FCEEE003906DC /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F11E742B2FCEEE003906DC /* MovieTableViewController.swift */; };
 		75F11E772B2FCEEE003906DC /* MovieTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F11E752B2FCEEE003906DC /* MovieTableViewController.xib */; };
 		75F11E7E2B2FD0BA003906DC /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F11E7C2B2FD0BA003906DC /* MovieTableViewCell.swift */; };
@@ -50,6 +52,8 @@
 		751B6C0B2B01B0D2008BDC5F /* Helpers+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helpers+TextFields.swift"; sourceTree = "<group>"; };
 		751B6C112B01B319008BDC5F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		751B6C122B01B319008BDC5F /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		751BAD982B362448002FAC86 /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
+		751BAD992B362448002FAC86 /* CustomHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
 		75F11E742B2FCEEE003906DC /* MovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
 		75F11E752B2FCEEE003906DC /* MovieTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewController.xib; sourceTree = "<group>"; };
 		75F11E7C2B2FD0BA003906DC /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
@@ -265,6 +269,7 @@
 		75F11E7A2B2FCF86003906DC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				751BAD982B362448002FAC86 /* CustomHeaderView.swift */,
 				75F11E742B2FCEEE003906DC /* MovieTableViewController.swift */,
 			);
 			path = Controller;
@@ -274,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				75F11E752B2FCEEE003906DC /* MovieTableViewController.xib */,
+				751BAD992B362448002FAC86 /* CustomHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 				75F11E7F2B2FD0BA003906DC /* MovieTableViewCell.xib in Resources */,
 				751B6C072B01A76A008BDC5F /* LoginViewController.xib in Resources */,
 				751B6BF32B01A4CF008BDC5F /* LaunchScreen.storyboard in Resources */,
+				751BAD9B2B362448002FAC86 /* CustomHeaderView.xib in Resources */,
 				751B6BF02B01A4CF008BDC5F /* Assets.xcassets in Resources */,
 				75F11E772B2FCEEE003906DC /* MovieTableViewController.xib in Resources */,
 				751B6BEE2B01A4CD008BDC5F /* Main.storyboard in Resources */,
@@ -383,6 +390,7 @@
 				75F8EE7C2B0AE69C00E3BCF1 /* APIClient.swift in Sources */,
 				751B6C132B01B319008BDC5F /* SignUpViewController.swift in Sources */,
 				751B6BE72B01A4CD008BDC5F /* AppDelegate.swift in Sources */,
+				751BAD9A2B362448002FAC86 /* CustomHeaderView.swift in Sources */,
 				751B6C062B01A76A008BDC5F /* LoginViewController.swift in Sources */,
 				751B6C0C2B01B0D2008BDC5F /* Helpers+TextFields.swift in Sources */,
 				751B6BE92B01A4CD008BDC5F /* SceneDelegate.swift in Sources */,

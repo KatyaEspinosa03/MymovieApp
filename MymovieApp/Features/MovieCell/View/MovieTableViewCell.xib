@@ -64,7 +64,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" name="TableViewBackground"/>
+                <color key="backgroundColor" name="BackgroundColor"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="VUh-DD-8T7" secondAttribute="trailing" constant="16" id="0z1-sy-yoK"/>
                     <constraint firstAttribute="bottom" secondItem="LYH-Cc-XoB" secondAttribute="bottom" constant="11" id="1kg-mE-H88"/>
@@ -86,8 +86,8 @@
     </objects>
     <resources>
         <image name="coco" width="350" height="476"/>
-        <namedColor name="TableViewBackground">
-            <color red="0.94900000095367432" green="0.80000001192092896" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.094117648900000003" green="0.098039209840000002" blue="0.15686275059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

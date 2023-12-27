@@ -80,7 +80,11 @@ class SignUpViewController: MainViewController {
                 case .success(let isSuccess):
                 
                     // TODO: We store info in internal database and navigate to main screen
-                    self.alertMessage(title: "Sign up Exitoso", message: "")
+                    //self.alertMessage(title: "Sign up Exitoso", message: "")
+                    
+                    let tableVC = MovieTableViewController()
+                    tableVC.modalPresentationStyle = .fullScreen
+                    self.present(tableVC, animated: true)
                     print(isSuccess)
                 case .failure(let error):
                     self.alertMessage(title: "Error", message: error.localizedDescription)

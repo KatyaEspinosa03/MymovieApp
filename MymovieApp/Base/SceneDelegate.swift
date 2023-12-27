@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene:  windowScene)
             
             let movieTVC = MovieTableViewController()
-            let loginVC = LoginViewController()
+//            let loginVC = LoginViewController()
             
             
             window.rootViewController = movieTVC
